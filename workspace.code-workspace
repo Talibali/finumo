@@ -1,0 +1,19 @@
+{
+    "folders": [
+        {
+            "path": "../apollo"
+        },
+        {
+            "path": "."
+        },
+        {
+            "path": "../finumo_old"
+        },
+        {
+            "path": "../brwsct-backend"
+        }
+    ],
+    "settings": {
+        "git.ignoreLimitWarning": true
+    }
+}
