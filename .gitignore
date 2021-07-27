@@ -127,3 +127,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Requirement file
+requirements.txt
+
+# VS code
+.vscode/
+
+# Fixture
+fixture.json
+
+# Workspace
+workspace.code-workspace
