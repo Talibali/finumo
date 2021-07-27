@@ -1,6 +1,6 @@
 import string
 
-from django.contrib.auth.models import User
+from project.apps.user.models import Profile
 from django.utils.crypto import get_random_string
 
 from celery import shared_task
@@ -14,6 +14,6 @@ def create_random_user_accounts(total):
             )
         email = '{}@example.com'.format(username)
         password = get_random_string(50)
-        User.objects.create_user(
-            username=username, email=email, password=password)
+        Profile.objects.create_user(
+            email=email, password=password)
     return '{} random users created with success!'.format(total)

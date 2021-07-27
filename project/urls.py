@@ -14,10 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf.urls import url
 from django.urls import path
+from project.core import views as core_views
 from project.apps.customer import views as onboard_view
 
 urlpatterns = [
+    url('^$', core_views.index),
     path('admin/', admin.site.urls),
     path('api/v1/customer', onboard_view.OnboardAPIView.as_view(), name='create-users'),
 ]
