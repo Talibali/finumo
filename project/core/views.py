@@ -38,27 +38,3 @@ def handler500(request):
     """
     response_data = ApiRenderer.format_response(status.HTTP_500_INTERNAL_SERVER_ERROR, status.is_informational(status.HTTP_500_INTERNAL_SERVER_ERROR))
     return HttpResponse(json.dumps(response_data), content_type="application/json")
-
-
-@api_view(['GET'])
-def healthCheckStatus(request):
-    try:
-        info = {
-            "status": "ok",
-            "info": {
-                "postgres": {"status": "up"},
-                "redis": {"status": "up"},
-                "rabbitMQ": {"status": "up"}
-            }
-        }
-        return Response(info)
-    except Exception:
-        info = {
-            "status": "error",
-            "info": {
-                "postgres": {"status": "down"},
-                "redis": {"status": "down"},
-                "rabbitMQ": {"status": "down"}
-            }
-        }
-        return Response(info)

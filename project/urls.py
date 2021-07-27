@@ -15,12 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url
-from django.urls import path
+from django.urls import path, include
 from project.core import views as core_views
-from project.apps.customer import views as onboard_view
+
+handler404 = 'project.core.views.handler404'
+handler500 = 'project.core.views.handler500'
 
 urlpatterns = [
     url('^$', core_views.index),
     path('admin/', admin.site.urls),
-    path('api/v1/customer', onboard_view.OnboardAPIView.as_view(), name='create-users'),
+
+    path('api/v1/', include([
+        # path('admin/', include('project.apps.superadmin.urls')),
+        # path('vendors/', include('project.apps.vendor.urls')),
+        # path('customer/', include('project.apps.customer.urls')),
+        path('auth/', include('project.apps.user.urls')),
+    ]))
+
 ]
