@@ -4,13 +4,22 @@
             "path": "../apollo"
         },
         {
-            "path": "."
-        },
-        {
             "path": "../finumo_old"
         },
         {
             "path": "../brwsct-backend"
+        },
+        {
+            "path": "../../../PHP"
+        },
+        {
+            "path": "../../../../../../opt/lampp/htdocs/annamrita"
+        },
+        {
+            "path": "."
+        },
+        {
+            "path": "../finumo2"
         }
     ],
     "settings": {

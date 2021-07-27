@@ -42,6 +42,12 @@ ALLOWED_HOSTS = []
 # RabbitMQ Broker
 CELERY_BROKER_URL = 'amqp://localhost'
 
+# Auth Setup
+AUTH_USER_MODEL = 'user.Profile'
+
+# DJANGO Settings Module
+DJANGO_SETTINGS_MODULE = env('DJANGO_SETTINGS_MODULE', default='config.settings')
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -52,6 +58,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'project.apps.common',
+    'project.apps.superadmin',
+    'project.apps.vendor',
+    'project.apps.customer',
+    'project.apps.user',
 
 ]
 
