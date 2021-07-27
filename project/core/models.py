@@ -9,7 +9,6 @@ class BaseModel(models.Model):
     """Base Model class to add a id, created_at and updated_at field as common for all models.
     properties: id (uuid), created_at, updated_at (timestamp)
     """
-
     class Meta:
         """Abstract base model class.
         abstract = True (abstract base class),
