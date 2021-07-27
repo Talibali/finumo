@@ -7,7 +7,6 @@ from rest_framework.utils import json, encoders
 import logging
 logger = logging.getLogger("watchtower")
 
-
 class ApiRenderer(BaseRenderer):
     """Render the custom response structure for application.
     Best practice proposed by DRF is to use 'renderer' classes. A renderer manipulates and returns structured response.

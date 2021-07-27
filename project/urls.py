@@ -31,5 +31,4 @@ urlpatterns = [
         # path('customer/', include('project.apps.customer.urls')),
         path('auth/', include('project.apps.user.urls')),
     ]))
-
 ]

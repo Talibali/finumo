@@ -25,4 +25,3 @@ class EmailAuthSerializer(serializers.Serializer):
 
     def create(self, validated_data):
         return user_models.Profile.objects.create(**validated_data)
-        
